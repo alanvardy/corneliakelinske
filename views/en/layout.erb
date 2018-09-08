@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>alanvardy.com |
+    <title>Cornelia Kelinske -
         <%= @title %>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +14,12 @@
 
 <body>
     <div class="header">
-        <a class="<%= " active" if @title=="Home" %>" href="/">CorneliaKelinske</a>
-        <a class="<%= " active" if @title=="Blog" %>" href="/blog">Blog</a>
-        <a class="<%= " active" if @title=="Portfolio" %>" href="/portfolio">Portfolio</a>
-        <a class="<%= " active" if @title=="Resume" %>" href="/resume">Resume</a>
+        <a class="<%= " active" if @title=="Welcome" %>" href="/">CorneliaKelinske</a>
+        <a class="<%= " active" if @title=="About Me" %>" href="/aboutme">About Me</a>
+        <a class="<%= " active" if @title=="Services" %>" href="/services">Services</a>
+        <a class="<%= " active" if @title=="Translation" %>" href="/translation">Translation</a>
+        <a class="<%= " active" if @title=="Interpretation" %>" href="/interpretation">Interpretation</a>
+        <a class="<%= " active" if @title=="Feedback" %>" href="/feedback">Feedback</a>
         <a class="<%= " active" if @title=="Contact" %>" href="/contact">Contact</a>
     </div>
     <div class="body-under">

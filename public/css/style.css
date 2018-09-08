@@ -1,28 +1,20 @@
 :root {
-    --light-brown: #7CC5EB;
-    --dark-brown: #342A25;
-    --white: #F2F2F2;
-    --red: #8d2f29;
-    --black: #120F1C;
+    --light-brown: #3C2C27;
+    --dark-brown: #322823;
+    --white: #FBFBFB;
+    --off-white: #ECE9E0;
+    --orange: #B6592B;
     --body-font: 'Pontano Sans', sans-serif;
     --title-font: 'Bevan', cursive;
     --bar-height: 50px;
     --padding: 30px;
 }
 
-.body-under {
-    background-image: url(/img/blue.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: auto;
-}
-
 .body {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: var(--off-white);
     height: 100%;
     width: 100%;
-    color: var(--black);
+    color: var(--dark-brown);
     font-family: var(--body-font);
     font-size: 25px;
     line-height: 1.2em;
@@ -38,7 +30,7 @@
     grid-column-start: 2;
     background-color: var(--white);
     border-radius: 10px;
-    border: 1px dashed var(--red);
+    border: 1px dashed var(--orange);
 }
 
 p {
@@ -72,7 +64,7 @@ p {
 .header a:hover,
 .footer a:hover,
 a.active {
-    color: var(--light-brown);
+    color: var(--orange);
 }
 
 .footer {

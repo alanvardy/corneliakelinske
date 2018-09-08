@@ -2,23 +2,31 @@ require "sinatra"
 
 class App < Sinatra::Base
   get "/" do
-    @title = "Home"
-    erb :index
+    @title = "Welcome"
+    erb :"en/index", :layout => :"en/layout"
   end
-  get "/blog" do
-    @title = "Blog"
-    erb :blog
+  get "/aboutme" do
+    @title = "About Me"
+    erb :"en/aboutme", :layout => :"en/layout"
   end
-  get "/portfolio" do
-    @title = "Portfolio"
-    erb :portfolio
+  get "/services" do
+    @title = "Services"
+    erb :"en/services", :layout => :"en/layout"
   end
-  get "/resume" do
-    @title = "Resume"
-    erb :resume
+  get "/translation" do
+    @title = "Translation"
+    erb :"en/translation", :layout => :"en/layout"
+  end
+  get "/interpretation" do
+    @title = "Interpretation"
+    erb :"en/interpretation", :layout => :"en/layout"
+  end
+  get "/feedback" do
+    @title = "Feedback"
+    erb :"en/feedback", :layout => :"en/layout"
   end
   get "/contact" do
     @title = "Contact"
-    erb :contact
+    erb :"en/contact", :layout => :"en/layout"
   end
 end
