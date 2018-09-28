@@ -17,7 +17,7 @@
     width: 100%;
     color: var(--dark-brown);
     font-family: var(--body-font);
-    font-size: 25px;
+    font-size: 16px;
     line-height: 1.2em;
     display: grid;
     grid-template-columns: minmax(30px, 1fr) minmax(100px, 800px) minmax(30px, 1fr);
@@ -94,4 +94,9 @@ a.active {
     height: calc(var(--bar-height) * .6);
     width: calc(var(--bar-height) * .6);
     vertical-align: middle;
+}
+
+li {
+    list-style-type: circle;
+    padding-left: 2%;
 }
