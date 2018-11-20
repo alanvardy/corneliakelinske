@@ -13,6 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-$primary: #2E231D;
-@import 'bootstrap'
