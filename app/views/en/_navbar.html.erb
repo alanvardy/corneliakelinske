@@ -1,25 +1,27 @@
-<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-primary">
-  <%= link_to 'CorneliaKelinske.com', en_index_path, class: 'navbar-brand' %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-        <%= link_to 'About Me', en_aboutme_path, class: 'nav-item nav-link' %>
-        <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Services
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <%= link_to 'Translation', en_translation_path, class: 'dropdown-item' %>
-        <%= link_to 'Interpretation', en_interpretation_path, class: 'dropdown-item' %>
-          <div class="dropdown-divider"></div>
-          <%= link_to 'All Services', en_services_path, class: 'dropdown-item' %>
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-primary">
+  <div class="container">
+      <%= link_to 'CorneliaKelinske.com', en_index_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <%= link_to 'About Me', en_aboutme_path, class: 'nav-item nav-link' %>
+            <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to 'Translation', en_translation_path, class: 'dropdown-item' %>
+            <%= link_to 'Interpretation', en_interpretation_path, class: 'dropdown-item' %>
+              <div class="dropdown-divider"></div>
+              <%= link_to 'All Services', en_services_path, class: 'dropdown-item' %>
+            </div>
+          </div>
+            <%= link_to 'Feedback', en_feedback_path, class: 'nav-item nav-link' %>
+            <%= link_to 'Contact', en_contact_path, class: 'nav-item nav-link' %>
+            <%= link_to 'Deutsch', en_contact_path, class: 'nav-item nav-link' %>
         </div>
       </div>
-        <%= link_to 'Feedback', en_feedback_path, class: 'nav-item nav-link' %>
-        <%= link_to 'Contact', en_contact_path, class: 'nav-item nav-link' %>
-        <%= link_to 'Deutsch', en_contact_path, class: 'nav-item nav-link' %>
-    </div>
   </div>
-</nav>
+    </nav>
