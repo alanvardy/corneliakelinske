@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Corneliakelinske</title>
+    <title>CK | <%= yield(:title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,10 +11,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </head>
-
+ <%= render 'en/header' %>
   <body>
-  <%= render 'en/header' %>
-  <%= render 'en/navbar' %>
+  <% if yield(:lang) == 'en' %>
+  <%= render 'en/navbar'%>
+<%   else %>
+  <%= render 'de/navbar' %>
+<%   end %>
+
   <div class="container mt-4">
     <%= yield %>
   </div>

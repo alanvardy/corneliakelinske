@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get 'de/kontakt'
   get 'de/ubersetzen'
   get 'de/dolmetschen'
+  get 'de/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

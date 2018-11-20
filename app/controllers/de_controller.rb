@@ -16,4 +16,8 @@ class DeController < ApplicationController
 
   def dolmetschen
   end
+
+  def index
+    
+  end
 end
