@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav mr-auto">
             <%= link_to 'Über mich', de_ubermich_path, class: 'nav-item nav-link' %>
             <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -21,8 +21,11 @@
           </div>
             <%= link_to 'Feedback', de_feedback_path, class: 'nav-item nav-link' %>
             <%= link_to 'Kontakt', de_kontakt_path, class: 'nav-item nav-link' %>
-            <%= link_to 'English', en_index_path, class: 'nav-item nav-link' %>
+
         </div>
+              <div class="navbar-nav">
+        <%= link_to 'English', en_index_path, class: 'nav-item nav-link' %>
+      </div>
       </div>
   </div>
     </nav>
