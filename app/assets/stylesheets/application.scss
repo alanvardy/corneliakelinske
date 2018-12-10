@@ -18,7 +18,16 @@ $primary: #3C2C27;
 $secondary: #B6592B;
 $light: #F1EFE8;
 $white: #FBFBFB;
+$font-size-base: 1.1rem;
+$font-family-base: 'EB Garamond', serif;
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quattrocento+Sans');
 @import "bootstrap";
+
+h1,
+h2,
+h3 {
+  font-family: 'Catamaran', sans-serif;
+}
 
 .background-image {
   background-image: image-url("paperbg.jpg");
