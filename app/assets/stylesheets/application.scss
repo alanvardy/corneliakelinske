@@ -19,14 +19,15 @@ $secondary: #B6592B;
 $light: #F1EFE8;
 $white: #FBFBFB;
 $font-size-base: 1.1rem;
-$font-family-base: 'EB Garamond', serif;
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quattrocento+Sans');
+$font-family-base: 'EB Garamond',
+serif;
+@import url('https://fonts.googleapis.com/css?family=Cinzel|EB+Garamond');
 @import "bootstrap";
 
 h1,
 h2,
 h3 {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Cinzel', serif;
 }
 
 .background-image {
