@@ -24,7 +24,13 @@
 
         </div>
               <div class="navbar-nav">
-        <%= link_to 'English', en_index_path, class: 'nav-item nav-link' %>
+                    <div class="nav-item nav-link">
+        <%= link_to en_index_path do %>
+          <%= image_tag "canadian.svg", class: "icon d-inline border" %>
+          <span class="nav-link d-inline">English</span>
+        <% end %>
+      </div>
+
       </div>
       </div>
   </div>

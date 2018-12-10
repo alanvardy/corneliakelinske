@@ -25,8 +25,14 @@
         <%= link_to 'Contact', en_contact_path, class: 'nav-item nav-link' %>
       </div>
       <div class="navbar-nav">
-        <%= link_to 'Deutsch', de_index_path, class: 'nav-item nav-link' %>
+ <div class="nav-item nav-link">
+        <%= link_to de_index_path do %>
+          <%= image_tag "german.svg", class: "icon d-inline border" %>
+          <span class="nav-link d-inline">Deutsch</span>
+        <% end %>
+      </div>
       </div>
     </div>
   </div>
 </nav>
+
