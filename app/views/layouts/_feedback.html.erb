@@ -1,0 +1,18 @@
+<div class="row">
+    <% counter = 0 %>
+    <% @feedback.each do |f| %>
+        <div class="col-12 col-md-8 <%= "offset-md-4" if counter.odd? %>" >
+            <blockquote class="blockquote container m-5 p-2 bg-grey0 shadow-sm rounded">
+                <p class="mb-0">
+                    <%= f[:text] %>
+                </p>
+                <footer class="ml-3 mt-1 small text-muted">
+                    <% f[:author].each do |a| %>
+                        <%= a %> <br>
+                    <% end %>
+                </footer>
+            </blockquote>
+        </div>
+        <% counter += 1 %>
+    <% end %>
+</div>
