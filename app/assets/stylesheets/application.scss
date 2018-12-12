@@ -13,21 +13,41 @@
 
 
  */
+
+$grey0: hsl(60, 2%, 61%);
+$grey1: hsl(60, 0%, 79%);
+$grey2: hsl(60, 0%, 70%);
+$grey3: hsl(60, 0%, 39%);
+$grey4: hsl(60, 0%, 25%);
+$grey5: hsl(60, 0%, 17%);
+
+$brown0: hsl(18, 33%, 82%);
+$brown1: hsl(20, 28%, 65%);
+$brown2: hsl(20, 20%, 52%);
+$brown3: hsl(20, 24%, 36%);
+$brown4: hsl(21, 23%, 15%);
+$brown5: hsl(23, 19%, 11%);
+
+$orange1: hsl(11, 70%, 75%);
+$orange2: hsl(12, 52%, 56%);
+$orange3: hsl(12, 64%, 44%);
+$orange4: hsl(12, 65%, 33%);
+$orange5: hsl(13, 56%, 21%);
+
 $dark: #2E231D;
 $primary: #3C2C27;
 $secondary: #B6592B;
 $light: #F1EFE8;
 $white: #FBFBFB;
 $font-size-base: 1.1rem;
-$font-family-base: 'EB Garamond',
-serif;
-@import url('https://fonts.googleapis.com/css?family=Cinzel|EB+Garamond');
+$font-family-base: 'IBM Plex Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,700|IBM+Plex+Sans:400,600');
 @import "bootstrap";
 
 h1,
 h2,
 h3 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .background-image {
