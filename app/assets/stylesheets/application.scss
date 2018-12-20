@@ -13,45 +13,52 @@
 
 
  */
-$theme-colors: ("grey0": hsl(0, 0%, 95%),
+$theme-colors: ("grey0": hsl(0, 0%, 99%),
 "grey1": hsl(60, 0%, 79%),
 "grey2": hsl(60, 0%, 70%),
 "grey3": hsl(60, 0%, 39%),
 "grey4": hsl(60, 0%, 25%),
 "grey5": hsl(60, 0%, 17%),
 
-"brown0": hsl(18, 33%, 82%),
+"brown0": hsl(18, 15%, 95%),
 "brown1": hsl(20, 28%, 65%),
 "brown2": hsl(20, 20%, 52%),
 "brown3": hsl(20, 24%, 36%),
 "brown4": hsl(21, 23%, 15%),
 "brown5": hsl(23, 19%, 11%),
 
-"orange1": hsl(11, 70%, 75%),
-"orange2": hsl(12, 52%, 56%),
-"orange3": hsl(12, 64%, 44%),
-"orange4": hsl(12, 65%, 33%),
-"orange5": hsl(13, 56%, 21%));
+"orange1": hsl(12, 80%, 75%),
+"orange2": hsl(12, 70%, 56%),
+"orange3": hsl(12, 80%, 44%),
+"orange4": hsl(12, 90%, 33%),
+"orange5": hsl(12, 95%, 21%),
 
-$primary: #3C2C27;
-$secondary: #B6592B;
-$light: #F1EFE8;
-$white: #FBFBFB;
+"footer": rgba(255, 255, 255, 0.5),
+"footer-over": rgba(255, 255, 255, 0.75),
+);
+
 $font-size-base: 1rem;
-$font-family-base: 'IBM Plex Sans',
-sans-serif;
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,700|IBM+Plex+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Cormorant:500|IBM+Plex+Serif:400');
+$font-family-base: 'IBM Plex Serif',
+serif;
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 h1,
 h2,
 h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant', serif;
+  color: map_get($theme-colors, 'orange4');
 }
 
-h2{
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
   margin-top: 40px;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -63,15 +70,43 @@ h2{
   background-size: cover;
 }
 
-.foreground {
-  background-color: $white;
-}
-
 .icon {
   height: 1rem;
   margin-bottom: 2px;
 }
 
+.rotate {
+  transform: rotate(180deg);
+}
+
+a.text-footer:hover {
+  color: map_get($theme-colors, 'footer-over') !important;
+  text-decoration: none;
+}
+
+.quote {
+  fill: map_get($theme-colors, 'footer-over');
+}
+
+.border-top,
+.border-bottom {
+  border-width: 3px !important;
+}
+
+// sticky footer code
+
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-  color: $primary;
+  margin-bottom: 40px; /* Margin bottom by footer height */
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* Set the fixed height of the footer here */
+  line-height: 40px; /* Vertically center the text there */
+  background-color: #f5f5f5;
 }

@@ -1,4 +1,4 @@
-    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-brown4">
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-brown4 border-bottom border-orange4">
   <div class="container">
       <%= link_to 'CorneliaKelinske.com', de_index_path, class: 'navbar-brand d-none d-sm-flex' %>
       <%= link_to 'CK | Diplomdolmetscherin', de_index_path, class: 'navbar-brand d-flex d-sm-none' %>
@@ -24,12 +24,10 @@
 
         </div>
               <div class="navbar-nav">
-                    <div class="nav-item nav-link">
-        <%= link_to en_index_path do %>
+        <%= link_to en_index_path, class: 'nav-item nav-link' do%>
           <%= image_tag "canadian.svg", class: "icon d-inline border" %>
-          <span class="nav-link d-inline">English</span>
+          <span class="d-inline">English</span>
         <% end %>
-      </div>
 
       </div>
       </div>

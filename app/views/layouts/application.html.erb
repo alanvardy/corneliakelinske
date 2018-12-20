@@ -12,16 +12,21 @@
 
   </head>
  <%= render 'layouts/header' %>
-  <body>
-  <% if yield(:lang) == 'en' %>
-  <%= render 'en/navbar'%>
-<%   else %>
-  <%= render 'de/navbar' %>
-<%   end %>
-<div class="background-image">
-  <div class="container foreground p-5">
-    <%= yield %>
-  </div>
-</div>
+  <body class="text-brown4 background-image">
+      <% if yield(:lang) == 'en' %>
+      <%= render 'en/navbar'%>
+    <%   else %>
+      <%= render 'de/navbar' %>
+    <%   end %>
+      <div class="container bg-grey0 p-3 p-md-5 p-1">
+        <%= yield %>
+      </div>
+      <footer class="footer container-fluid bg-brown4 d-flex justify-content-around border-top border-orange4">
+          <% if yield(:lang) == 'en' %>
+      <%= render 'en/footer'%>
+    <%   else %>
+      <%= render 'de/footer' %>
+    <%   end %>
+      </div>
   </body>
 </html>

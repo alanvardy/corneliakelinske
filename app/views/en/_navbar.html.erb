@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-brown4">
+<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-brown4 border-bottom border-orange4">
   <div class="container">
     <%= link_to 'CorneliaKelinske.com', en_index_path, class: 'navbar-brand d-none d-sm-flex' %>
     <%= link_to 'CK | Professional Translator', en_index_path, class: 'navbar-brand d-flex d-sm-none' %>
@@ -25,12 +25,10 @@
         <%= link_to 'Contact', en_contact_path, class: 'nav-item nav-link' %>
       </div>
       <div class="navbar-nav">
- <div class="nav-item nav-link">
-        <%= link_to de_index_path do %>
+        <%= link_to de_index_path, class: 'nav-item nav-link' do%>
           <%= image_tag "german.svg", class: "icon d-inline border" %>
-          <span class="nav-link d-inline">Deutsch</span>
+          <span class="d-inline">Deutsch</span>
         <% end %>
-      </div>
       </div>
     </div>
   </div>

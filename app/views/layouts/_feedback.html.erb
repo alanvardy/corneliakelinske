@@ -1,16 +1,23 @@
 <div class="row">
     <% counter = 0 %>
     <% @feedback.each do |f| %>
-        <div class="col-12 col-md-8 <%= "offset-md-4" if counter.odd? %>" >
-            <blockquote class="blockquote container m-5 p-2 bg-grey0 shadow-sm rounded">
-                <p class="mb-0">
-                    <%= f[:text] %>
-                </p>
-                <footer class="ml-3 mt-1 small text-muted">
-                    <% f[:author].each do |a| %>
-                        <%= a %> <br>
-                    <% end %>
-                </footer>
+        <div class="col-12 col-md-7 <%= "offset-md-4" if counter.odd? %>" >
+            <blockquote class="blockquote container m-md-5 my-2 p-2 bg-brown0 shadow-sm rounded">
+            <div class="d-flex">
+                <div class="align-top px-2"><%= image_tag 'quote.svg', width: 15, class: 'quote' %></div>
+
+                <div>
+                    <p class="mb-0">
+                        <%= f[:text] %>
+                    </p>
+                </div>
+                <div class="align-top px-2 rotate"><%= image_tag 'quote.svg', width: 15, class: 'quote' %></div>
+            </div>
+            <footer class="ml-3 mt-1 small text-orange2">
+                <% f[:author].each do |a| %>
+                    <%= a %> <br>
+                <% end %>
+            </footer>
             </blockquote>
         </div>
         <% counter += 1 %>
