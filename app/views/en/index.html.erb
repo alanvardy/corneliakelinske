@@ -1,29 +1,39 @@
 <% provide(:title, "Welcome") %>
 <% provide(:lang, "en") %>
-
 <h1>
     Welcome
 </h1>
-<p>
-    If you are looking for high-quality translation and interpretation services for the language combinations English –
-    German and/or German – English, you are looking in the right place. As a professional translator/interpreter with
-    several years of experience in various areas of expertise, I can offer high-quality translations at a competitive
-    rate.
-</p>
-<p>
-    Please refer to the About me section to learn more about my qualifications and professional experience. Information
-    about my services and areas of expertise is available under Services.
-</p>
-<p>
-    feel free to contact me if you have any questions or if you would like to receive a free and non-binding
-    quotation.
-</p>
-<p>
-    I am looking forward to working with you!
-</p>
-<div class="jumbotron bg-grey0 mt-5">
-    <blockquote class="blockquote">
-    <p class="mb-0 mr-3">I pity anyone who thinks machine translation is a substitute for the real thing.</p>
-    <footer class="ml-3 mt-1 small text-muted">Private client</footer>
-    </blockquote>
+<div class="row">
+    <div class="col-12 col-lg-6 mt-3 mt-lg-5 mb-3">
+        <%= image_tag 'cornelia_desk.jpg', class: 'w-100 rounded shadow' %>
+    </div>
+    <div class="col-12 col-lg-6 mt-lg-5 mb-3">
+        <p>
+            If you are looking for high-quality translation and interpretation services for the language combinations English –
+            German and/or German – English, you are looking in the right place. As a professional translator/interpreter with
+            several years of experience in various areas of expertise, I can offer high-quality translations at a competitive
+            rate.
+        </p>
+        <p>
+            Please refer to the About me section to learn more about my qualifications and professional experience. Information
+            about my services and areas of expertise is available under Services.
+        </p>
+        <p>
+            feel free to contact me if you have any questions or if you would like to receive a free and non-binding
+            quotation.
+        </p>
+        <p>
+            I am looking forward to working with you!
+        </p>
+    </div>
 </div>
+<% @feedback = [
+    {text:  %(
+                You can expect nothing but
+                excellence from her.
+            ),
+    author: ["Julia Glaremin","Managing Partner","Apollo Lingua GbR"]},
+
+] %>
+
+<%= render 'layouts/feedback', center: true %>
