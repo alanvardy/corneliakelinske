@@ -1,7 +1,11 @@
 <div class="row">
     <% counter = 0 %>
     <% @feedback.each do |f| %>
-        <div class="col-12 col-md-7 <%= "offset-md-4" if counter.odd? %>" >
+        <% if local_assigns[:center] %>
+            <div class="col-12 col-lg-8 offset-lg-1" >
+        <% else %>
+            <div class="col-12 col-md-7 <%= "offset-md-4" if counter.odd? %>" >
+        <% end %>
             <blockquote class="blockquote container m-md-5 my-2 p-2 bg-brown0 shadow-sm rounded">
             <div class="d-flex">
                 <div class="align-top px-2"><%= image_tag 'quote.svg', width: 15, class: 'quote' %></div>
