@@ -1,10 +1,12 @@
-<%= link_to(de_linzenzen_path, html_options = {class: 'text-footer'}) do %>
-    <i class="far fa-question-circle"></i> Linzenzen
-<% end %>
-<%= link_to(de_kontakt_path, html_options = {class: 'text-footer'}) do %>
-    <i class="far fa-envelope"></i> Kontakt Cornelia
-<% end %>
-<%= link_to('https://www.alanvardy.com/', html_options = {class: 'text-footer', target: "_blank"}) do %>
-    <i class="fas fa-sitemap"></i></i> Webmaster
-<% end %>
+<footer class="footer container-fluid bg-brown4 d-flex justify-content-between border-top border-orange2">
+    <%= link_to(de_linzenzen_path, html_options = {class: 'text-footer'}) do %>
+        <i class="far fa-question-circle"></i><span class="d-none d-sm-inline-block pl-1"> Linzenzen</span>
+    <% end %>
+    <%= link_to(de_kontakt_path, html_options = {class: 'text-footer'}) do %>
+        <i class="far fa-envelope"></i><span class="d-none d-sm-inline-block pl-1"> Kontakt Cornelia</span>
+    <% end %>
+    <%= link_to('https://www.alanvardy.com/', html_options = {class: 'text-footer', target: "_blank"}) do %>
+        <i class="fas fa-sitemap"></i></i><span class="d-none d-sm-inline-block pl-1"> Webmaster</span>
+    <% end %>
+</footer>
 
