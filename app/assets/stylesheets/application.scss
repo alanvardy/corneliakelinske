@@ -53,8 +53,9 @@ h1 {
 
 h2 {
   margin-top: 40px;
-  font-size: 1.2rem;
-  font-family: 'IBM Plex Serif';
+  font-size: 1rem;
+  // font-size: 1.2rem;
+  // font-family: 'IBM Plex Serif';
   color: map_get($theme-colors, 'orange4');
 }
 
@@ -73,6 +74,12 @@ h2 {
 
 .rotate {
   transform: rotate(180deg);
+}
+a{
+  color: map_get($theme-colors, 'orange5');
+  &:hover {
+    color: map_get($theme-colors, 'orange2');
+  }
 }
 
 a.text-footer:hover {

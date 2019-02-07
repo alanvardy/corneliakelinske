@@ -28,13 +28,8 @@ class EnControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should get resume' do
-    get en_resume_url
-    assert_response :success
-  end
-
-  test 'should get services' do
-    get en_services_url
+  test 'should get overview' do
+    get en_overview_url
     assert_response :success
   end
 

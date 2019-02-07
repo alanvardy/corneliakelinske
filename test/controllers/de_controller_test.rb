@@ -8,8 +8,8 @@ class DeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should get leistungen' do
-    get de_leistungen_url
+  test 'should get allgemeines' do
+    get de_allgemeines_url
     assert_response :success
   end
 

@@ -12,11 +12,11 @@
             rate.
         </p>
         <p>
-            Please refer to the About me section to learn more about my qualifications and professional experience. Information
-            about my services and areas of expertise is available under Services.
+            Please refer to the <%= link_to 'About Me', en_aboutme_path %> section to learn more about my qualifications and professional experience. Information
+            about my services and areas of expertise is available under <%= link_to 'Services', en_overview_path %>.
         </p>
         <p>
-            feel free to contact me if you have any questions or if you would like to receive a free and non-binding
+            Feel free to <%= link_to 'contact me', en_contact_path %> if you have any questions or if you would like to receive a free and non-binding
             quotation.
         </p>
         <p>
@@ -32,8 +32,10 @@
                 You can expect nothing but
                 excellence from her.
             ),
-    author: ["Julia Glaremin","Managing Partner","Apollo Lingua GbR"]},
-
+    author: ["Julia Glaremin","Managing Partner"],
+    company: ["Apollo Lingua GbR"],
+    website: 'http://www.apollo-lingua.com/index.html'}
 ] %>
 
 <%= render 'layouts/feedback', center: true %>
+

@@ -25,6 +25,13 @@
                 <% f[:author].each do |a| %>
                     <%= a %> <br>
                 <% end %>
+                <% if f[:company] && f[:website] %>
+                    <%= link_to f[:website] do %>
+                        <% f[:company].each do |a| %>
+                            <%= a %> <br>
+                        <% end %>
+                    <% end %>
+                <% end %>
             </footer>
             </blockquote>
         </div>

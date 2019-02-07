@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'en/feedback'
   get 'en/index'
   get 'en/interpretation'
-  get 'en/resume'
   get 'en/overview'
   get 'en/translation'
   get 'en/licenses'
