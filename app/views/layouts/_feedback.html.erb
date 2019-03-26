@@ -22,7 +22,7 @@
                     <%= a %> <br>
                 <% end %>
                 <% if f[:company] && f[:website] %>
-                    <%= link_to f[:website] do %>
+                    <%= link_to f[:website], html_options = {target: "_blank"} do %>
                         <% f[:company].each do |a| %>
                             <%= a %> <br>
                         <% end %>
