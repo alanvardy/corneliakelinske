@@ -17,11 +17,7 @@
                 </div>
                 <div class="align-top px-2 rotate"><%= image_tag 'quote.svg', width: 15, class: 'quote' %></div>
             </div>
-            <% if local_assigns[:center] %>
                 <footer class="text-center mt-1 small text-orange2">
-            <% else %>
-                <footer class="ml-3 mt-1 small text-orange2">
-            <% end %>
                 <% f[:author].each do |a| %>
                     <%= a %> <br>
                 <% end %>
