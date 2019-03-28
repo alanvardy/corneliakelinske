@@ -1,33 +1,49 @@
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-brown4 border-bottom border-orange2">
-  <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav mr-auto">
-            <%= link_to 'Home', de_index_path, class: 'nav-item nav-link' %>
-            <%= link_to 'Über mich', de_ubermich_path, class: 'nav-item nav-link' %>
-            <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Leistungen
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to 'Allgemeines', de_allgemeines_path, class: 'dropdown-item' %>
-              <%= link_to 'Übersetzen', de_ubersetzen_path, class: 'dropdown-item' %>
-              <%= link_to 'Dolmetschen', de_dolmetschen_path, class: 'dropdown-item' %>
-            </div>
-          </div>
-            <%= link_to 'Feedback', de_feedback_path, class: 'nav-item nav-link' %>
-            <%= link_to 'Kontakt', de_kontakt_path, class: 'nav-item nav-link' %>
+<%
+change_language =
+{
+  'Kontakt' => en_contact_path,
+  'Über mich' => en_aboutme_path,
+  'Feedback' => en_feedback_path,
+  'Willkommen' => en_index_path,
+  'Dolmetschen' => en_interpretation_path,
+  'Übersetzen' => en_translation_path,
+  'Allgemeines' => en_overview_path,
+  'Linzenzen' => en_licenses_path
+}
+ %>
 
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-brown4 border-bottom border-orange2">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav mr-auto">
+        <%= link_to 'Home', de_index_path, class: 'nav-item nav-link' %>
+        <%= link_to 'Über mich', de_ubermich_path, class: 'nav-item nav-link' %>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Leistungen
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to 'Allgemeines', de_allgemeines_path, class: 'dropdown-item' %>
+            <%= link_to 'Übersetzen', de_ubersetzen_path, class: 'dropdown-item' %>
+            <%= link_to 'Dolmetschen', de_dolmetschen_path, class: 'dropdown-item' %>
+          </div>
         </div>
-              <div class="navbar-nav">
-        <%= link_to en_index_path, class: 'nav-item nav-link' do%>
-          <%= image_tag "canadian.svg", class: "icon d-inline border" %>
-          <span class="d-inline">English</span>
+        <%= link_to 'Feedback', de_feedback_path, class: 'nav-item nav-link' %>
+        <%= link_to 'Kontakt', de_kontakt_path, class: 'nav-item nav-link' %>
+
+      </div>
+      <div class="navbar-nav">
+        <%= link_to change_language[yield(:title)], class: 'nav-item nav-link' do%>
+        <%= image_tag "canadian.svg", class: "icon d-inline border" %>
+        <span class="d-inline">English</span>
         <% end %>
 
       </div>
-      </div>
+    </div>
   </div>
-    </nav>
+</nav>

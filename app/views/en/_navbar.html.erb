@@ -1,12 +1,26 @@
+<%
+change_language =
+{
+  'Contact Me' => de_kontakt_path,
+  'About Me' => de_ubermich_path,
+  'Feedback' => de_feedback_path,
+  'Welcome' => de_index_path,
+  'Interpretation' => de_dolmetschen_path,
+  'Translation' => de_ubersetzen_path,
+  'Overview' => de_allgemeines_path,
+  'Licenses' => de_linzenzen_path
+}
+ %>
+
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-brown4 border-bottom border-orange2">
   <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav mr-auto">
-      <%= link_to 'Home', en_index_path, class: 'nav-item nav-link' %>
+        <%= link_to 'Home', en_index_path, class: 'nav-item nav-link' %>
         <%= link_to 'About Me', en_aboutme_path, class: 'nav-item nav-link' %>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -23,12 +37,11 @@
         <%= link_to 'Contact', en_contact_path, class: 'nav-item nav-link' %>
       </div>
       <div class="navbar-nav">
-        <%= link_to de_index_path, class: 'nav-item nav-link' do%>
-          <%= image_tag "german.svg", class: "icon d-inline border" %>
-          <span class="d-inline">Deutsch</span>
+        <%= link_to change_language[yield(:title)], class: 'nav-item nav-link' do%>
+        <%= image_tag "german.svg", class: "icon d-inline border" %>
+        <span class="d-inline">Deutsch</span>
         <% end %>
       </div>
     </div>
   </div>
 </nav>
-
