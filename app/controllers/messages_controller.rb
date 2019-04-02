@@ -11,16 +11,24 @@ class MessagesController < ApplicationController
     if @message.valid?
       @message.send
       redirect_to root_path
-      flash[:success] = 'I have received your message and will be in touch soon!'
+      if @message.lang == 'de'
+        flash[:success] = 'Ich habe Ihre Nachricht erhalten und werde mich bald melden!'
+      else
+        flash[:success] = 'I have received your message and will be in touch soon!'
+      end
     else
-      flash[:warning] = 'There was an error sending your message. Please try again.'
+      if @message.lang == 'de'
+        flash[:warning] = 'Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuche es erneut.'
+      else
+        flash[:warning] = 'There was an error sending your message. Please try again.'
+      end
       render :new
-        end
     end
+  end
 
   private
 
   def message_params
-    params.require(:message).permit(:name, :email, :phone_number, :body)
-    end
+    params.require(:message).permit(:name, :email, :phone_number, :body, :lang)
+  end
 end

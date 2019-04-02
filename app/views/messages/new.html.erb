@@ -40,16 +40,16 @@
     <% name = 'Name' %>
     <% email_address = 'E-Mail-Addresse' %>
     <% phone_number = 'Telefonnummer (freiwillig)' %>
-    <% message = 'Botschaft' %>
-    <% submit = 'Sende Formular' %>
-    <% additional_text = 'Ihre E-Mail-Adresse wird nicht weitergegeben' %>
+    <% message = 'Ihre Anfrage' %>
+    <% submit = 'Anfrage abschicken' %>
+    <% additional_text = 'Ihre E-Mail-Adresse wird nicht an Dritte weitergegeben' %>
     <% else %>
     <% name = 'Name' %>
     <% email_address = 'Email address' %>
     <% phone_number = 'Phone number (optional)' %>
     <% message = 'Message' %>
     <% submit = 'Send Form' %>
-    <% additional_text = 'Your email address will not be shared with 3rd parties' %>
+    <% additional_text = 'Your email address will not be shared with third parties' %>
     <% end %>
 
     <div class="col-12 col-lg-6">
@@ -68,6 +68,7 @@
             <%= f.text_area :body, class: 'form-control', rows: '5', placeholder: message %>
         </div>
         <div class="form-group">
+            <%= f.hidden_field :lang, value: @lang%>
             <%= f.submit submit, class: 'btn btn-outline-orange4'%>
         </div>
         <small class="text-muted ml-3">
