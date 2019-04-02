@@ -11,9 +11,9 @@ class Message
     mg_client = Mailgun::Client.new ENV['mailgun_secret_api_key']
     info = {
       from: email,
-      to: 'alanvardy@gmail.com',
-      subject: "Email from #{name} - corneliakelinske.com",
-      text: "From: #{name}, Email: #{email}, Phone: #{phone_number} \n\n #{body}"
+      to: 'corneliakelinske@gmail.com',
+      subject: "#{name} - corneliakelinske.com",
+      text: "From: #{name}\nEmail: #{email}\nPhone: #{phone_number}\nLanguage: #{lang} \n\n #{body}"
     }
     mg_client.send_message 'mg.corneliakelinske.com', info
   end

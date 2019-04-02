@@ -18,9 +18,9 @@ class MessagesController < ApplicationController
       redirect_to root_path
     else
       if @message.lang == 'de'
-        flash[:warning] = 'Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuche es erneut.'
+        flash.now[:warning] = 'Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuche es erneut.'
       else
-        flash[:warning] = 'There was an error sending your message. Please try again.'
+        flash.now[:warning] = 'There was an error sending your message. Please try again.'
       end
       render :new
     end
