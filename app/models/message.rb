@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'mailgun-ruby'
 
 class Message
@@ -9,10 +11,10 @@ class Message
     mg_client = Mailgun::Client.new ENV['MAILGUN']
     info = {
       from: email,
-      to:   'corneliakelinske@gmail.com',
+      to: 'alanvardy@gmail.com',
       subject: "Email from #{name} - corneliakelinske.com",
-      text:    "From: #{name}, Email: #{email}, Phone: #{phone_number} \n\n #{body}"
-                  }
+      text: "From: #{name}, Email: #{email}, Phone: #{phone_number} \n\n #{body}"
+    }
     mg_client.send_message 'mg.corneliakelinske.com', info
   end
 end
