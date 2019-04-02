@@ -1,0 +1,78 @@
+<% provide(:title, "Kontakt") if @lang == 'de' %>
+<% provide(:title, "Contact Me") if @lang == 'en' %>
+<% provide(:lang, @lang) %>
+
+<h1>
+    <%= @lang == 'de' ? 'Kontakt' : 'Contact' %>
+</h1>
+<div class="row">
+    <div class="col-12 col-lg-6 mb-3">
+        <% if @lang == 'de' %>
+        <p>
+            Bitte schicken Sie mir Ihre Anfragen per E-Mail an <a
+                href="mailto:corneliakelinske@gmail.com"><strong>corneliakelinske@gmail.com</strong></a> oder rufen Sie
+            mich an.
+        </p>
+        <p>
+            Meine Telefonnummer (in Kanada) lautet <strong>+1 780 782 1782</strong>
+        </p>
+        <p>
+            Ihre Anfragen beantworte ich stets so schnell wie möglich, bitte beachten Sie jedoch, dass Sie mich am
+            besten in der Zeit von
+            8 – 16 Uhr MST bzw. 16 – 0 Uhr MEZ erreichen können.
+        </p>
+        <% else %>
+        <p>
+            You can reach me via email at <a
+                href="mailto:corneliakelinske@gmail.com"><strong>corneliakelinske@gmail.com</strong></a>
+        </p>
+        <p>
+            or by phone at <strong>+1 780 782 1782</strong>
+        </p>
+        <p>
+            I check my emails regularly from 8 am - 4:30 pm MST and do my best to answer promptly.
+        </p>
+        <% end %>
+        <%= image_tag 'contact.jpg', class: 'w-75 d-block rounded shadow mx-auto mt-2' %>
+    </div>
+
+    <% if @lang == 'de' %>
+    <% name = 'Name' %>
+    <% email_address = 'E-Mail-Addresse' %>
+    <% phone_number = 'Telefonnummer (freiwillig)' %>
+    <% message = 'Botschaft' %>
+    <% submit = 'Sende Formular' %>
+    <% additional_text = 'Ihre E-Mail-Adresse wird nicht weitergegeben' %>
+    <% else %>
+    <% name = 'Name' %>
+    <% email_address = 'Email address' %>
+    <% phone_number = 'Phone number (optional)' %>
+    <% message = 'Message' %>
+    <% submit = 'Send Form' %>
+    <% additional_text = 'Your email address will not be shared with 3rd parties' %>
+    <% end %>
+
+    <div class="col-12 col-lg-6">
+        <%= form_for @message, url: messages_create_path do |f| %>
+        <div class="form-group">
+            <%= f.text_field :name, class: 'form-control', placeholder: name %>
+        </div>
+
+        <div class="form-group">
+            <%= f.email_field :email, class: 'form-control', placeholder: email_address %>
+        </div>
+        <div class="form-group">
+            <%= f.telephone_field :phone_number, class: 'form-control', placeholder: phone_number %>
+        </div>
+        <div class="form-group">
+            <%= f.text_area :body, class: 'form-control', rows: '5', placeholder: message %>
+        </div>
+        <div class="form-group">
+            <%= f.submit submit, class: 'btn btn-outline-orange4'%>
+        </div>
+        <small class="text-muted ml-3">
+            <%= additional_text %>
+        </small>
+        <% end %>
+    </div>
+</div>
