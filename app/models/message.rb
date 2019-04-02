@@ -6,7 +6,7 @@ class Message
   validates :name, :email, :body, presence: true
 
   def send
-    mg_client = Mailgun::Client.new ENV['mailgun_secret_api_key']
+    mg_client = Mailgun::Client.new ENV['MAILGUN']
     info = {
       from: email,
       to:   'corneliakelinske@gmail.com',
