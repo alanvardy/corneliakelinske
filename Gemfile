@@ -39,15 +39,11 @@ gem 'mailgun-ruby', '~>1.1.6'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'pg', '>= 0.18', '< 2.0'
 
-group :production do
-  gem 'pg', '>= 0.18', '< 2.0'
-end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'sqlite3'
-  gem 'dotenv-rails'
 end
 
 group :development do
@@ -57,9 +53,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'solargraph'
-  gem 'rubocop'
-  gem 'dokku-cli'
+
 end
 
 group :test do
@@ -75,3 +69,15 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Tools
+gem 'rubocop', groups: %i[development test]
+gem 'rubocop-performance', groups: %i[development test]
+gem 'annotate', group: :development
+gem 'bullet', groups: %i[development test]
+gem 'solargraph', group: :development
+gem 'fasterer', group: :development
+gem 'debride', group: :development
+gem 'reek', group: :development
+gem 'dokku-cli', group: :development
+gem 'dotenv-rails', groups: %i[development test]
