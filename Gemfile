@@ -24,7 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem "bootstrap", ">= 4.3.1"
 gem 'jquery-rails'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass', '~> 5.8.1'
 gem 'mailgun-ruby', '~>1.1.6'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
