@@ -36,25 +36,25 @@ guard :minitest, spring: true, all_on_start: false do
     resource_tests('users') +
       ['test/integration/microposts_interface_test.rb']
   end
- end
+end
 
- # Returns the integration tests corresponding to the given resource.
+# Returns the integration tests corresponding to the given resource.
 
- def integration_tests(resource = :all)
+def integration_tests(resource = :all)
   if resource == :all
     Dir['test/integration/*']
   else
     Dir["test/integration/#{resource}_*.rb"]
   end
- end
+end
 
- # Returns the controller tests corresponding to the given resource.
+# Returns the controller tests corresponding to the given resource.
 
- def controller_test(resource)
+def controller_test(resource)
   "test/controllers/#{resource}_controller_test.rb"
- end
+end
 
- # Returns all tests for the given resource.
- def resource_tests(resource)
+# Returns all tests for the given resource.
+def resource_tests(resource)
   integration_tests(resource) << controller_test(resource)
- end
+end
