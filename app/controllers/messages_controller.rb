@@ -10,11 +10,11 @@ class MessagesController < ApplicationController
     @message = Message.new message_params
     if @message.valid?
       @message.send
-      if @message.lang == 'de'
-        flash[:success] = 'Ich habe Ihre Nachricht erhalten und werde mich bald melden!'
-      else
-        flash[:success] = 'I have received your message and will be in touch soon!'
-      end
+      flash[:success] = if @message.lang == 'de'
+                          'Ich habe Ihre Nachricht erhalten und werde mich bald melden!'
+                        else
+                          'I have received your message and will be in touch soon!'
+                        end
       redirect_to root_path
     else
       if @message.lang == 'de'

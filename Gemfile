@@ -21,10 +21,10 @@ gem 'coffee-rails', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-gem "bootstrap", ">= 4.3.1"
-gem 'jquery-rails'
+gem 'bootstrap', '>= 4.3.1'
 gem 'font-awesome-sass', '~> 5.8.1'
+gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 gem 'mailgun-ruby', '~>1.1.6'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -48,12 +48,11 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-
 end
 
 group :test do
@@ -71,13 +70,14 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Tools
-gem 'rubocop', groups: %i[development test]
-gem 'rubocop-performance', groups: %i[development test]
 gem 'annotate', group: :development
 gem 'bullet', groups: %i[development test]
-gem 'solargraph', group: :development
-gem 'fasterer', group: :development
 gem 'debride', group: :development
-gem 'reek', group: :development
 gem 'dokku-cli', group: :development
 gem 'dotenv-rails', groups: %i[development test]
+gem 'fasterer', group: :development
+gem 'reek', group: :development
+gem 'rubocop', groups: %i[development test]
+gem 'rubocop-performance', groups: %i[development test]
+gem 'rubocop-rails', groups: %i[development test]
+gem 'solargraph', group: :development
