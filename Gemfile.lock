@@ -58,7 +58,7 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    annotate (2.7.5)
+    annotate (3.0.2)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 13.0)
     ast (2.4.0)
@@ -159,7 +159,7 @@ GEM
     htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (1.6.0)
+    i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     jaro_winkler (1.5.3)
@@ -360,7 +360,7 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.20)
-    zeitwerk (2.1.9)
+    zeitwerk (2.2.0)
 
 PLATFORMS
   ruby
