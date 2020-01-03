@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new message_params
-    if @message.valid?
+    if verify_recaptcha(model: @message) && @message.valid?
       @message.send
       flash[:success] = if @message.lang == 'de'
                           'Ich habe Ihre Nachricht erhalten und werde mich bald melden!'

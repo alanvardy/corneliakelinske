@@ -69,6 +69,9 @@
         </div>
         <div class="form-group">
             <%= f.hidden_field :lang, value: @lang%>
+            <%= recaptcha_tags %>
+        </div>
+        <div class="form-group">
             <%= f.submit submit, class: 'btn btn-outline-orange4'%>
         </div>
         <small class="text-muted ml-3">
