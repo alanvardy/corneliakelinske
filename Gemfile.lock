@@ -250,6 +250,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    recaptcha (5.2.1)
+      json
     reek (5.5.0)
       codeclimate-engine-rb (~> 0.4.0)
       kwalify (~> 0.7.0)
@@ -396,6 +398,7 @@ DEPENDENCIES
   pg
   puma
   rails
+  recaptcha
   reek
   rubocop
   rubocop-performance
